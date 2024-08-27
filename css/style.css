@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3eae3;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+    max-width: 400px;
+}
+.container .image, .container .image2 {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.container .image2 {
+    display: none;
+}
+
+.container .card {
+    background-color: #ffff;
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+}
+
+.container .card p:first-of-type {
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #a9aab4;
+    margin-bottom: 20px;
+
+}
+
+.container .card h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.container .card h3+p {
+    color: #909198;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.7;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.container .card .price {
+    font-size: 40px;
+    color: #3c8067;
+    font-weight: bold;
+    position: relative;
+}
+
+.price::before {
+    content: '169.99';
+    font-size: 15px;
+    color: #a7a9b2;
+    position: absolute;
+    transform: translateY(-50%);
+    text-decoration: line-through;
+    top: 23px;
+    right: 66px;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    background-color: #3c8067;
+    border-radius: 10px;
+    padding: 20px 10px 20px;
+}
+
+.button img {
+    position: absolute;
+    width: 17px;
+    top: 20px;
+    left: 79px;
+
+}
+
+.button button {
+    color: #ffff;
+    background-color: #3c8067;
+    font-size: 17px;
+    border: none;
+    ;
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .container .image {
+        display: none;
+    }
+
+    .container .image2 {
+        display: block;
+    }
+
+    .container .card h3 {
+        font-size: 30px;
+    }
+
+    .button img {
+        left: 100px;
+    }
+
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    background-color: #f3eae3;
+}
